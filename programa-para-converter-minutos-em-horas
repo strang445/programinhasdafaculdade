@@ -1,0 +1,28 @@
+/******************************************************************************
+Programa que converte minutos em horas
+*******************************************************************************/
+#include <stdio.h>
+
+// Função que converte minutos em horas e minutos
+void converter_minutos(int total_minutos, int *horas, int *minutos) {
+    *horas = total_minutos / 60;
+    *minutos = total_minutos % 60;
+}
+
+int main() {
+    int total_minutos;
+    int horas, minutos;
+
+    // Solicita o valor de minutos ao usuário
+    printf("Digite o número total de minutos: ");
+    scanf("%d", &total_minutos);
+
+    // Converte minutos em horas e minutos
+    converter_minutos(total_minutos, &horas, &minutos);
+
+    // Exibe o resultado
+    printf("%d minutos é equivalente a %d horas e %d minutos.\n", total_minutos, horas, minutos);
+
+    return 0;
+}
+
